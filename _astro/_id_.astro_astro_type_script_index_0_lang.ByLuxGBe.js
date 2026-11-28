@@ -1,0 +1,1 @@
+document.querySelectorAll(`[data-copy]`).forEach(e=>{e.hidden=!1,e.addEventListener(`click`,async()=>{let t=document.getElementById(e.dataset.copy??``);if(t)try{await navigator.clipboard.writeText(t.textContent??``),e.textContent=`Copied`}catch{e.textContent=`Copy failed: select the text instead`}})});
